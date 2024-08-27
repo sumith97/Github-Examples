@@ -20,15 +20,21 @@ jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - name: List all the contents of the folder
         run: |
-          ls
+          ls ${{ github.workspace }}
+
       - name: Decode File Content
         run: |
-          cat github-actions/${{inputs.data}} | base64 --decode > ./decoded_file.txt
+          cat ${{ github.workspace }}/github-actions/${{inputs.data}} | base64 --decode > ./decoded_file.txt
+
       - name: Display Greeting
         run: |
           echo "${{ inputs.greeting }}, ${{ inputs.name }}!"
+          
       - name: Display File Content
         run: |
           echo "Contents of the file:"
