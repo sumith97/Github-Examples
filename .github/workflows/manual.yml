@@ -20,6 +20,9 @@ jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
+      - name: List all the contents of the folder
+        run: |
+          ls
       - name: Decode File Content
         run: |
           cat github-actions/${{inputs.data}} | base64 --decode > ./decoded_file.txt
