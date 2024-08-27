@@ -1,3 +1,4 @@
+name: Test_Shedule
 on:
   schedule:
     - cron: '*/2 * * * *'
