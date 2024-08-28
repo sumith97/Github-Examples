@@ -1,0 +1,7 @@
+name : context-demo
+on: [push]
+Jobs:
+  First:
+    - name: checking outputs
+      run: |
+        echo "Crazy Fellow"
