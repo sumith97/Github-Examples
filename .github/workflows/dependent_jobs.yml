@@ -19,7 +19,7 @@ jobs:
 
   Third_Job:
     runs-on: ubuntu-latest
-    needs: [First_Job, Second_Job,Sixth_Job]
+    needs: [First_Job, Second_Job,Sixth_Job, Fourth_Job]
     steps:
       - name: "Third Job tasks"
         run: |
