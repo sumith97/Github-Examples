@@ -1,6 +1,7 @@
 name : context-demo
 on: [push]
-Jobs:
+
+jobs:
   First:
     - name: checking outputs
       run: |
