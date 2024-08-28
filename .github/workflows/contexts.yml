@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: "checking outputs"
         env:
-          MY_ACTION: ${{github.action_path}}
+          MY_ACTION: ${{github.actor}}
         run: |
           echo "Crazy Fellow"
           echo "$MY_ACTION"
