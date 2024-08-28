@@ -9,7 +9,7 @@ jobs:
         run:  echo "Hello World!"
       - name: "Crazy Shit"
         run: |
-          if: ["${{github.repository }}"== "sumith97/Githubxamples"]; then
+          if [ "${{ github.repository }}" == "sumith97/Githubxamples" ]; then
             echo "Bllall"
           fi
   goodbye-moon:
