@@ -11,8 +11,9 @@ jobs:
   hello_world:
     runs-on: self-hosted
     steps:
-      - name: "Echo Basic Information"
+      - name: "Checkin"
         uses: actions/checkout@v3
+      - name: "Echo Basic Stuff"
         run: |
           echo "REF: $GITHUB_REF"
           echo "Job ID: $GITHUB_JOB"
