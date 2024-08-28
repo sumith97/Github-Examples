@@ -10,4 +10,4 @@ jobs:
           MY_ACTION: ${{github.actor}}
         run: |
           echo "Crazy Fellow"
-          echo "${{github.actor}}"
+          echo "${github.actor}"
