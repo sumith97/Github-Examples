@@ -3,6 +3,7 @@ on: [push]
 
 env: 
   DAY_OF_WEEK: Monday
+  MY_VAL: Crazy !!!!
 
 jobs:
   MyJob:
