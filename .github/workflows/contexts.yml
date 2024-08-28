@@ -3,6 +3,6 @@ on: [push]
 
 jobs:
   First:
-    - name: checking outputs
+    - name: "checking outputs"
       run: |
         echo "Crazy Fellow"
