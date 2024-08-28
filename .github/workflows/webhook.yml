@@ -3,7 +3,7 @@ name: Webhook Event Handler
 on:
   repository_dispatch:
     types:
-      - webhook
+      - webhook_fun
 
 jobs:
   process-webhook:
