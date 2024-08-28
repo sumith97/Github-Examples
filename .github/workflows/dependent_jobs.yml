@@ -1,0 +1,45 @@
+name: "Dependent Jobs"
+on: [push]
+jobs:
+  First_Job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "First Job tasks"
+        run: |
+          echo "First Job is done"
+  
+  Second_Job:
+    runs-on: ubuntu-latest
+    needs: First_Job
+    steps:
+      - name: "Second Job tasks"
+        run: |
+          echo "Second Job is done"
+  
+
+  Third_Job:
+    runs-on: ubuntu-latest
+    needs: [First_Job, Second_Job]
+    steps:
+      - name: "Third Job tasks"
+        run: |
+          echo "Third Job is done"
+  
+  Fourth_Job:
+    runs-on: ubuntu-latest
+    needs: [Third_Job]
+    steps:
+      - name: "Fourth Job tasks"
+        run: |
+          echo "Fourth Job is done"
+  
+  Fifth_Job:
+    runs-on: ubuntu-latest
+    needs: Second_Job
+    steps:
+      - name: "Fifth Job tasks"
+        run: |
+          echo "Fifth Job is done"
+  
+
+  
