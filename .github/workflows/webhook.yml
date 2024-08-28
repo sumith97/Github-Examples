@@ -15,4 +15,4 @@ jobs:
       - name: Log Event Information
         run: |
           echo "Event type: $GITHUB_EVENT_NAME"
-          echo "This is crazy !!!!"
+          echo "This is crazy !!!!!"
