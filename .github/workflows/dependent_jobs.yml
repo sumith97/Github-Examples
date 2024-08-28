@@ -2,14 +2,14 @@ name: "Dependent Jobs"
 on: [push]
 jobs:
   First_Job:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: "First Job tasks"
         run: |
           echo "First Job is done"
   
   Second_Job:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: First_Job
     steps:
       - name: "Second Job tasks"
@@ -19,7 +19,7 @@ jobs:
 
   Third_Job:
     runs-on: ubuntu-latest
-    needs: [First_Job, Second_Job,Sixth_Job, Fourth_Job]
+    needs: [First_Job, Second_Job,Sixth_Job]
     steps:
       - name: "Third Job tasks"
         run: |
@@ -42,7 +42,7 @@ jobs:
           echo "Fifth Job is done"
 
   Sixth_Job:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: "Sixth Job tasks"
         run: |
