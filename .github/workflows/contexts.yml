@@ -5,9 +5,9 @@ jobs:
   First:
     runs-on: ubuntu-latest
     steps:
-      env:
-        MY_ACTION: ${{github.action}}
       - name: "checking outputs"
+        env:
+          MY_ACTION: ${{github.action}}
         run: |
           echo "Crazy Fellow"
           echo "$MY_ACTION"
