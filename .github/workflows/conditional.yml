@@ -9,7 +9,7 @@ jobs:
         run:  echo "Hello World!"
       - name: "Crazy Shit"
         run: |
-          if: github.repository == 'sumith97/Githubxamples'
+          if: ["${{github.repository }}"== "sumith97/Githubxamples"]
           echo "Bllall"
   goodbye-moon:
     runs-on: ubuntu-latest
