@@ -12,6 +12,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: "Echo Basic Information"
+        uses: actions/checkout@v3
         run: |
           echo "REF: $GITHUB_REF"
           echo "Job ID: $GITHUB_JOB"
