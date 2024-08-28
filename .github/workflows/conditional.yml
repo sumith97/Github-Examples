@@ -7,6 +7,9 @@ jobs:
     steps:
       - name: "Hello World"
         run:  echo "Hello World!"
+      - name: "Crazy Shit"
+        if: github.repository == 'sumith97/Githubxamples'
+        run: echo "Bllall"
   goodbye-moon:
     runs-on: ubuntu-latest
     steps:
