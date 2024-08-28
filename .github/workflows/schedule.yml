@@ -1,3 +1,4 @@
+name: sheduling jobs in Github
 on:
   schedule:
     - cron: '*/2 * * * *'
