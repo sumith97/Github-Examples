@@ -19,7 +19,7 @@ jobs:
 
   Third_Job:
     runs-on: ubuntu-latest
-    needs: [First_Job, Second_Job]
+    needs: [First_Job, Second_Job,Sixth_Job]
     steps:
       - name: "Third Job tasks"
         run: |
@@ -40,6 +40,13 @@ jobs:
       - name: "Fifth Job tasks"
         run: |
           echo "Fifth Job is done"
+
+  Sixth_Job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Sixth Job tasks"
+        run: |
+          echo "Sixth Job is done"
   
 
   
