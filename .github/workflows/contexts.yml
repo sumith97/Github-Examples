@@ -3,6 +3,8 @@ on: [push]
 
 jobs:
   First:
-    - name: "checking outputs"
-      run: |
-        echo "Crazy Fellow"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "checking outputs"
+        run: |
+          echo "Crazy Fellow"
