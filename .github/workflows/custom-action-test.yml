@@ -6,12 +6,12 @@ jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-    - name: Hello world action step
+    - name: Uses my custom function
       uses: sumith97/custom-action@main
-      id: hello
+      id: custom
       with:
         who-to-greet: 'Mona the Octocat'
     - name: Get the output time
       run: |
-        echo "The time was ${{ steps.hello.outputs.time }}"
+        echo "The time was ${{ steps.custom.outputs.time }}"
         echo "Man I love you !!!!"
