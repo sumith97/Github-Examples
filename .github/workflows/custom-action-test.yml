@@ -14,4 +14,5 @@ jobs:
     - name: Get the output time check
       run: |
         echo "The time was ${{ steps.custom.outputs.time }}"
+        echo "${{steps.cutom.outputs.fun}}"
         echo "Man I love you !!!!"
