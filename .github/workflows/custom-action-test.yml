@@ -13,6 +13,7 @@ jobs:
         who-to-greet: 'Mona the Octocats'
     - name: Get the output time check
       run: |
-        echo "The time was ${{ steps.custom.outputs.time }}"
-        echo "${{ steps.custom.outputs.fun }} common man"
-        echo "Man I love you !!!!"
+        # echo "The time was ${{ steps.custom.outputs.time }}"
+        # echo "${{ steps.custom.outputs.fun }} common man"
+        # echo "Man I love you !!!!"
+        echo "funny fellow !!!!"
