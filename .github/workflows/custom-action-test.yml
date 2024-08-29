@@ -10,7 +10,7 @@ jobs:
       uses: sumith97/custom-action@main
       id: custom
       with:
-        who-to-greet: 'Mona the Octocat'
+        who-to-greet: 'Mona the Octocats'
     - name: Get the output time check
       run: |
         echo "The time was ${{ steps.custom.outputs.time }}"
