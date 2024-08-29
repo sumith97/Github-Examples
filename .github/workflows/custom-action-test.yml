@@ -6,6 +6,8 @@ jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
     - name: Uses my custom function
       uses: sumith97/custom-action@main
       id: custom
