@@ -1,4 +1,4 @@
-name: "Custom_Action"
+name: "Custom_Action_Test"
 
 on: [push]
 
