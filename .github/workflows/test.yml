@@ -12,3 +12,13 @@ jobs:
       - run: |
           echo "hello Bro !!!!"
           echo "Bumper !!!!"
+  
+  Second:
+    runs-on: windows-latest
+    needs: First
+    steps:
+      - name: Doing
+        run: echo "Bloody hell"
+      
+      - run: |
+          echo "This is a windows job"
