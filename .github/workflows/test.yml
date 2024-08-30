@@ -1,0 +1,14 @@
+name: parctise
+on: [push]
+
+jobs:
+  First:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking
+        run: echo "You are checking !!!!!"
+      
+      - run: echo "funny"
+      - run: |
+        echo "hello Bro !!!!"
+        echo "Bumper !!!!"
