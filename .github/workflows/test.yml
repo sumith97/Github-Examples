@@ -22,3 +22,12 @@ jobs:
       
       - run: |
           echo "This is a windows job"
+  
+  Third:
+    strategy:
+      matrix:
+        os: [ubuntu-latest,windows-latest]
+    
+    runs-on: ${{matrix.os}}
+    steps:
+      - run: echo "This is from ${{matrix.os}} machine"
