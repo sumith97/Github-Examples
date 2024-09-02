@@ -29,10 +29,8 @@ jobs:
         os: [ubuntu-latest,windows-latest]
         ver: [1,2,3]
         include:
-          - ver: 5 
-          
-        
-    
+          - ver: 5
+            os: ubuntu-latest
     runs-on: ${{matrix.os}}
     steps:
       - run: echo "This is from ${{matrix.os}} and ${{matrix.ver}}machine"
