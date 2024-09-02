@@ -1,4 +1,4 @@
-name: parctise1
+name: parctise2
 on: [push]
 
 concurrency:
