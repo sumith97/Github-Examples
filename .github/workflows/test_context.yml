@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          if ['${{github.repository}}''=='sumith97/Github-Examples']; then
+          if ['${{github.repository}}'=='sumith97/Github-Examples']; then
             echo "This repository is ${{github.repository}}"
           fi
         continue-on-error: true
