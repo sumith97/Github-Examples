@@ -1,4 +1,4 @@
-name: parctise
+name: parctise1
 on: [push]
 
 jobs:
