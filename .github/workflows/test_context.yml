@@ -16,7 +16,7 @@ jobs:
         continue-on-error: true
   
 
-  case 2:
+  case2:
     runs-on: ubuntu-latest
     steps:
       - run: echo "funny fellow!!!!"
