@@ -8,7 +8,7 @@ jobs:
       - run: |
           if [ "${{ github.repository }}" = "sumith97/Github-Examples" ]; then
             echo "This repository is ${{github.repository}}"
-            exit 1
+            exit 0
           fi
           if [ "$GITHUB_REPOSITORY" == "sumith97/Github-Examples" ]; then
             echo "This repository is $GITHUB_REPOSITORY"
