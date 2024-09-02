@@ -8,5 +8,4 @@ jobs:
       - run: |
           echo "This respository is $GITHUB_REPOSITORY"
           echo "This repository is ${{github.repository}}"
-          echo "This respository is ${{GITHUB_REPOSITORY}}"
         continue-on-error: true
