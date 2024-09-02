@@ -14,10 +14,10 @@ jobs:
           echo "Bumper !!!!"
   
   Second:
-  concurrency:
+    runs-on: windows-latest
+    concurrency:
       group: Second-${{ github.ref }}
       cancel-in-progress: true
-    runs-on: windows-latest
     needs: First
     steps:
       - name: Doing
