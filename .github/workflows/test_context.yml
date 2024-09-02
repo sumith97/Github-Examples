@@ -18,5 +18,6 @@ jobs:
 
   case2:
     runs-on: ubuntu-latest
+    needs: case1
     steps:
       - run: echo "funny fellow!!!!"
