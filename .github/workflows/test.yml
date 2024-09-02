@@ -31,6 +31,9 @@ jobs:
         include:
           - ver: 5
             os: ubuntu-latest
+        exclude:
+          - ver: [2,3]
+            os: windows-latest
     runs-on: ${{matrix.os}}
     steps:
       - run: echo "This is from ${{matrix.os}} and ${{matrix.ver}}machine"
