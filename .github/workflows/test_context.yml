@@ -8,8 +8,15 @@ jobs:
       - run: |
           if [ "${{ github.repository }}" = "sumith97/Github-Examples" ]; then
             echo "This repository is ${{github.repository}}"
+            exit 1
           fi
           if [ "$GITHUB_REPOSITORY" == "sumith97/Github-Examples" ]; then
             echo "This repository is $GITHUB_REPOSITORY"
           fi
         continue-on-error: true
+  
+
+  case 2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "funny fellow!!!!"
