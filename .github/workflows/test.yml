@@ -1,5 +1,11 @@
-name: parctise2
+name: parctise1
 on: [push]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+
 
 jobs:
   First:
