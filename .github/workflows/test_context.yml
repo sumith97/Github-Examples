@@ -14,10 +14,12 @@ jobs:
             echo "This repository is $GITHUB_REPOSITORY"
           fi
         #continue-on-error: true
-  
+    
+      - run: |
+        echo "Check if it works"  
 
   case2:
     runs-on: ubuntu-latest
-    needs: case1
+    #needs: case1
     steps:
       - run: echo "funny fellow!!!!"
