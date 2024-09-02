@@ -1,9 +1,9 @@
 name: parctise
 on: [push]
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+# concurrency:
+#   group: ${{ github.workflow }}-${{ github.ref }}
+#   cancel-in-progress: true
 
 
 
@@ -20,6 +20,9 @@ jobs:
           echo "Bumper !!!!"
   
   Second:
+  concurrency:
+      group: Second-${{ github.ref }}
+      cancel-in-progress: true
     runs-on: windows-latest
     needs: First
     steps:
