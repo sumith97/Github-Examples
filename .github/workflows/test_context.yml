@@ -1,0 +1,13 @@
+name: context_demo
+on: [push]
+
+jobs:
+  case1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+        echo "This respository is ${{GITHUB_REPOSITORY}}"
+        echo "This respository is $GITHUB_REPOSITORY"
+        echo "This repository is ${{github.repository}}"
+
+      continue-on-error: true
