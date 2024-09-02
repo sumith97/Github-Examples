@@ -6,6 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "This repository is ${{github.repository}}"
-
-      continue-on-error: true
+          echo "This repository is fu8n"
+        continue-on-error: true
