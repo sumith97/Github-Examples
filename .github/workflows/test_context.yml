@@ -4,6 +4,8 @@ on: [push]
 jobs:
   case1:
     runs-on: ubuntu-latest
+    outputs:
+      fun: crazy
     steps:
       - run: |
           if [ "${{ github.repository }}" = "sumith97/Github-Examples" ]; then
@@ -38,3 +40,4 @@ jobs:
           echo ::warning::Warning message from case2
           echo ::error::Error message from case2
           echo ::endgroup::
+          echo "${{needs.case1.outputs.fun}}"
