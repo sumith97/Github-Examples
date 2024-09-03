@@ -19,7 +19,7 @@ jobs:
   case2:
     runs-on: ubuntu-latest
     needs: case1
-    if: ${{needs.case1.result == "failure"}}
+    if: needs.case1.result == "failure"
     steps:
       - run: echo "funny fellow!!!!"
       - run: echo "case1 result :${{needs.case1.result}}"
