@@ -16,10 +16,22 @@ jobs:
       - run: |
           echo "Check if it works"  
 
+  # case2:
+  #   runs-on: ubuntu-latest
+  #   needs: case1
+  #   if: needs.case1.result == 'failure' || always()
+  #   steps:
+  #     - run: echo "funny fellow!!!!"
+  #     - run: echo "case1 result :${{needs.case1.result}}"
+
   case2:
     runs-on: ubuntu-latest
     needs: case1
-    if: needs.case1.result == 'failure' || always()
+    if: needs.case1.result == 'failure'
     steps:
-      - run: echo "funny fellow!!!!"
-      - run: echo "case1 result :${{needs.case1.result}}"
+      - name: Log Group
+        run: |
+          echo ::group::Case2 Logs
+          echo "case1 result: ${{ needs.case1.result }}"
+          echo "case2 is running because case1 failed"
+          echo ::endgroup::
