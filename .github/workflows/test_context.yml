@@ -13,7 +13,6 @@ jobs:
           if [ "$GITHUB_REPOSITORY" == "sumith97/Github-Examples" ]; then
             echo "This repository is $GITHUB_REPOSITORY environment variable"
           fi
-        continue-on-error: true
       - run: |
           echo "Check if it works"  
 
