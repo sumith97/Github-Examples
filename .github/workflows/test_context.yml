@@ -34,4 +34,7 @@ jobs:
           echo ::group::Case2 Logs
           echo "case1 result: ${{ needs.case1.result }}"
           echo "case2 is running because case1 failed"
+          echo ::debug::Debug message from case2
+          echo ::warning::Warning message from case2
+          echo ::error::Error message from case2
           echo ::endgroup::
