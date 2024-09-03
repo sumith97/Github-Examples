@@ -26,8 +26,8 @@ jobs:
 
   case2:
     runs-on: ubuntu-latest
-    needs: case1
     if: needs.case1.result == 'failure'
+    needs: case1
     steps:
       - name: Log Group
         run: |
