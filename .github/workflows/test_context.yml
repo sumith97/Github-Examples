@@ -30,6 +30,8 @@ jobs:
     runs-on: ubuntu-latest
     if: needs.case1.result == 'failure' || always()
     needs: case1
+    env:
+      ACTIONS_STEP_DEBUG: true
     steps:
       - name: Log Group
         run: |
