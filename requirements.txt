@@ -14,4 +14,3 @@ seaborn
 # Database ORM
 SQLAlchemy
 
-django
