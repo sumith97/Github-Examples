@@ -33,4 +33,4 @@ jobs:
     - name: Run your script or tests
       run: |
         python test.py # Replace with your actual script or test command
-        echo "Done"
+        echo "Done2"
