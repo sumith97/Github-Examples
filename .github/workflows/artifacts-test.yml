@@ -42,7 +42,7 @@ jobs:
       run: ls -R
     
     - name: Contenets in the file
-      run: cat artificat.txt
+      run: cat artifact.txt
 
     - name: Use output from previous job
       run: |
