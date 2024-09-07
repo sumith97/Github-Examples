@@ -6,6 +6,10 @@ jobs:
   job1:
     runs-on: ubuntu-latest
 
+    outputs:
+      test2: ${{steps.step1.outputs.test2}}
+      fun: "crazy"
+
     steps:
     - name: Checkout code
       uses: actions/checkout@main
@@ -40,3 +44,4 @@ jobs:
     - name: Use output from previous job
       run: |
         echo "The output from job1 is ${{ needs.job1.outputs.test2}}"
+        echo "The output from job1 is ${{ needs.job1.outputs.fun}}"
