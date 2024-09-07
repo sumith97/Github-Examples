@@ -6,7 +6,8 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     outputs:
-      output1: ${{ steps.step1.outputs.test }}
+      output1: ${{ steps.step1.outputs.test1 }}
+      output2: ${{ steps.step1.outputs.test2 }}
 
     steps:
     - name: Checkout code
@@ -23,7 +24,9 @@ jobs:
 
     - name: Set output
       id: step1
-      run: echo "::set-output name=test::hello-world"
+      run: |
+        echo "::set-output name=test1::hello-world"
+        echo "test2=hello-world-baby" >> $GITHUB_OUTPUT
 
   job2:
     needs: job1
@@ -39,4 +42,6 @@ jobs:
       run: ls -R
 
     - name: Use output from previous job
-      run: echo "The output from job1 is ${{ needs.job1.outputs.output1 }}"
+      run: |
+        echo "The output from job1 is ${{ needs.job1.outputs.output1 }}"
+        echo "The output from job1 is ${{ needs.job1.outputs.test2 }}"
