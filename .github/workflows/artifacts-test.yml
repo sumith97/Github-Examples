@@ -14,14 +14,20 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@main
 
-    - name: Create a file
+    - name: Create a file1
       run: echo "This is a file for artifact testing" > artifact.txt
+
+    
+    - name: Create a file2
+      run: echo "Yellow yellow dirty fellow" > artifact2.txt
 
     - name: Upload artifact
       uses: actions/upload-artifact@main
       with:
         name: my-artifact
-        path: artifact.txt
+        path: |
+          artifact.txt
+          artifact2.txt
 
     - name: Set output
       id: step1
@@ -42,7 +48,9 @@ jobs:
       run: ls -R
     
     - name: Contenets in the file
-      run: cat artifact.txt
+      run: |
+        cat artifact.txt
+        cat artifact2.txt
 
     - name: Use output from previous job
       run: |
