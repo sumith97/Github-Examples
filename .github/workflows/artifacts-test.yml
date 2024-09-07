@@ -16,7 +16,7 @@ jobs:
       run: echo "This is a file for artifact testing" > artifact.txt
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact
       with:
         name: my-artifact
         path: artifact.txt
