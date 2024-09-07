@@ -1,0 +1,42 @@
+name: Artifact and Output Example
+
+on: [push]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    outputs:
+      output1: ${{ steps.step1.outputs.test }}
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Create a file
+      run: echo "This is a file for artifact testing" > artifact.txt
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: artifact.txt
+
+    - name: Set output
+      id: step1
+      run: echo "::set-output name=test::hello-world"
+
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: my-artifact
+
+    - name: Display structure of downloaded files
+      run: ls -R
+
+    - name: Use output from previous job
+      run: echo "The output from job1 is ${{ needs.job1.outputs.output1 }}"
