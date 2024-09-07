@@ -21,6 +21,10 @@ jobs:
     - name: Create a file2
       run: echo "Yellow yellow dirty fellow" > artifact2.txt
 
+    
+    - name: Create a file3
+      run: echo "Blue Blue dirty fellow" > artifact3.txt
+
     - name: Upload artifact
       uses: actions/upload-artifact@main
       with:
@@ -28,6 +32,15 @@ jobs:
         path: |
           artifact.txt
           artifact2.txt
+    
+    - name: Upload Artifact another one
+      uses: actions/upload-artifact@main
+      with:
+        name: new-artifact
+        path: |
+          artifact2.txt
+          artifact3.txt
+    
 
     - name: Set output
       id: step1
@@ -43,14 +56,24 @@ jobs:
       uses: actions/download-artifact@main
       with:
         name: my-artifact
+    
+    - name: Download artifact another
+      uses: actions/download-artifact@main
+      with:
+        name: new-artifact
 
     - name: Display structure of downloaded files
       run: ls -R
     
-    - name: Contenets in the file
+    - name: Contents in the file
       run: |
         cat artifact.txt
         cat artifact2.txt
+    
+    - name: Contents in the file from new-artifact
+      run: |
+        cat artifact2.txt
+        cat artifact3.txt
 
     - name: Use output from previous job
       run: |
