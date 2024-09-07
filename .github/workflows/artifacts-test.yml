@@ -44,4 +44,4 @@ jobs:
     - name: Use output from previous job
       run: |
         echo "The output from job1 is ${{ needs.job1.outputs.output1 }}"
-        echo "The output from job1 is ${{ needs.job1.outputs.test2 }}"
+        echo "The output from job1 is ${{ needs.job1.outputs.output2 }}"
