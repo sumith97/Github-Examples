@@ -1,0 +1,14 @@
+name: Review
+on: push
+
+jobs:
+  deploy:
+    needs: build
+    steps:
+      - uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ github.TOKEN }}
+          approvers: sumith97
+      - name: Deploy to Production
+        if: success()
+        run: echo "Deploying to production..."
