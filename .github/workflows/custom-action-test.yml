@@ -16,4 +16,4 @@ jobs:
         echo "The time was ${{ steps.custom.outputs.time }}"
         echo "${{ steps.custom.outputs.fun }} common man"
         echo "Man I love you !!!!"
-        echo "funny fellow !!!!"
+        echo "funny fellow2 !!!!"
